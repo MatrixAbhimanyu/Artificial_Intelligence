@@ -14,6 +14,10 @@ namespace Artificial_Intelligence.Control
         #endregion
 
         #region Constructor
+        /// <summary>
+        ///  Initializes a new instance of the <see cref="SpeechEngine" /> class.
+        /// </summary>
+        /// <param name="icmdManager"></param>
         public SpeechEngine(ICommandManager icmdManager)
         {
             _icmdManager = icmdManager;
@@ -23,12 +27,20 @@ namespace Artificial_Intelligence.Control
         #endregion
 
         #region Public Member
+        /// <summary>
+        /// initialize speech engine
+        /// </summary>
         public void IntializeSpeechEngine()
         {
             IntializeCommandsAndGrammer();
             RegisterIOAndEventHandler();
         }
 
+        /// <summary>
+        /// learn command
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="output"></param>
         public void AddCommand(string input, string output)
         {
             var message = _icmdManager.LearnCommand(input, output);
@@ -36,11 +48,17 @@ namespace Artificial_Intelligence.Control
             IntializeCommandsAndGrammer();
         }
 
+        /// <summary>
+        /// start speech recognize engine to listen command
+        /// </summary>
         public void start()
         {
             _speechEngine.RecognizeAsync(RecognizeMode.Multiple);
         }
 
+        /// <summary>
+        /// stop speech recognize engine to listen command
+        /// </summary>
         public void stop()
         {
             _speechEngine.RecognizeAsyncStop();
@@ -48,6 +66,11 @@ namespace Artificial_Intelligence.Control
         #endregion
 
         #region Private Member
+        /// <summary>
+        /// filter command based on speech
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void sr_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             string message;
@@ -62,6 +85,9 @@ namespace Artificial_Intelligence.Control
             _speaker.Speak(message);
         }
 
+        /// <summary>
+        /// intialize command and language grammmer
+        /// </summary>
         private void IntializeCommandsAndGrammer()
         {
             var commands = new Choices();
@@ -74,6 +100,9 @@ namespace Artificial_Intelligence.Control
             _speechEngine.LoadGrammar(grammar);
         }
 
+        /// <summary>
+        /// register I/O and event handler
+        /// </summary>
         private void RegisterIOAndEventHandler()
         {
             _speechEngine.SetInputToDefaultAudioDevice();

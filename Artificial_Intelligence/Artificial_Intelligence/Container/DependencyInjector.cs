@@ -7,6 +7,10 @@ namespace Artificial_Intelligence.Container
 {
     public static class DependencyInjector
     {
+        /// <summary>
+        /// build unity container to resolve dependancy
+        /// </summary>
+        /// <returns></returns>
         public static IUnityContainer BuildUnityContainer()
         {
             var currentContainer = new UnityContainer();

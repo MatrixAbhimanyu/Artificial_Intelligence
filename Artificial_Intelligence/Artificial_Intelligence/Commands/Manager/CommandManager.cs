@@ -12,6 +12,10 @@ namespace Artificial_Intelligence.Commands.Manager
         #endregion
 
         #region Cunstructor
+        /// <summary>
+        ///  Initializes a new instance of the <see cref="CommandManager" /> class.
+        /// </summary>
+        /// <param name="cmdRepo"></param>
         public CommandManager(ICommandRepository cmdRepo)
         {
             _cmdRepo = cmdRepo;
@@ -19,11 +23,22 @@ namespace Artificial_Intelligence.Commands.Manager
         #endregion
 
         #region Public Member
+        /// <summary>
+        /// find action commond
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public string FindCommand(string input)
         {
             return GetActionCommand(input);
         }
 
+        /// <summary>
+        /// cerate and update command
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="output"></param>
+        /// <returns></returns>
         public string LearnCommand(string input, string output)
         {
             var outputFilter = string.IsNullOrWhiteSpace(output) ? CommandNotAccepted : output;
@@ -38,11 +53,20 @@ namespace Artificial_Intelligence.Commands.Manager
             return CommandAccepted;
         }
 
+        /// <summary>
+        /// get all command list
+        /// </summary>
+        /// <returns></returns>
         public string[] GetCommandList()
         {
             return _cmdRepo.GetCommandList();
         }
 
+        /// <summary>
+        /// get internet command
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public string InternetCommand(string input)
         {
             var output = GetSavedCommand(input);
@@ -58,6 +82,11 @@ namespace Artificial_Intelligence.Commands.Manager
         #endregion
 
         #region Private Member
+        /// <summary>
+        /// Get action command
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         private string GetActionCommand(string input)
         {
             var message = CommandAccepted;
@@ -77,16 +106,30 @@ namespace Artificial_Intelligence.Commands.Manager
             return message;
         }
 
+        /// <summary>
+        /// Get message format
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
         private string GetMessageFormat(string param)
         {
             return $"it is {param}";
         }
 
+        /// <summary>
+        /// open url for internet command
+        /// </summary>
+        /// <param name="webUrl"></param>
         private void OpenUrl(string webUrl)
         {
             System.Diagnostics.Process.Start(webUrl);
         }
 
+        /// <summary>
+        /// get exist command
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         private string GetSavedCommand(string input)
         {
             return _cmdRepo.Read(input);
