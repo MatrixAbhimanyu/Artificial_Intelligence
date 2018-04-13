@@ -28,7 +28,7 @@ namespace Artificial_Intelligence.Control
 
         #region Public Member
         /// <summary>
-        /// initialize speech engine
+        /// Initialize speech engine
         /// </summary>
         public void IntializeSpeechEngine()
         {
@@ -37,7 +37,7 @@ namespace Artificial_Intelligence.Control
         }
 
         /// <summary>
-        /// learn command
+        /// Learn command
         /// </summary>
         /// <param name="input"></param>
         /// <param name="output"></param>
@@ -49,7 +49,7 @@ namespace Artificial_Intelligence.Control
         }
 
         /// <summary>
-        /// start speech recognize engine to listen command
+        /// Start speech recognize engine to listen command
         /// </summary>
         public void start()
         {
@@ -57,7 +57,7 @@ namespace Artificial_Intelligence.Control
         }
 
         /// <summary>
-        /// stop speech recognize engine to listen command
+        /// Stop speech recognize engine to listen command
         /// </summary>
         public void stop()
         {
@@ -67,7 +67,7 @@ namespace Artificial_Intelligence.Control
 
         #region Private Member
         /// <summary>
-        /// filter command based on speech
+        /// Filter command based on speech
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -86,7 +86,7 @@ namespace Artificial_Intelligence.Control
         }
 
         /// <summary>
-        /// intialize command and language grammmer
+        /// Intialize command and language grammmer
         /// </summary>
         private void IntializeCommandsAndGrammer()
         {
@@ -101,7 +101,7 @@ namespace Artificial_Intelligence.Control
         }
 
         /// <summary>
-        /// register I/O and event handler
+        /// Register I/O and event handler
         /// </summary>
         private void RegisterIOAndEventHandler()
         {

@@ -4,14 +4,14 @@ namespace Artificial_Intelligence.Commands.Manager
     public interface ICommandManager
     {
         /// <summary>
-        /// find action commond
+        /// Find action commond
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
         string FindCommand(string input);
 
         /// <summary>
-        /// cerate and update command
+        /// Create and update command
         /// </summary>
         /// <param name="input"></param>
         /// <param name="output"></param>
@@ -19,13 +19,13 @@ namespace Artificial_Intelligence.Commands.Manager
         string LearnCommand(string input, string output);
 
         /// <summary>
-        /// get all command list
+        /// Get all command list
         /// </summary>
         /// <returns></returns>
         string[] GetCommandList();
 
         /// <summary>
-        /// get internet command
+        /// Get internet command
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>

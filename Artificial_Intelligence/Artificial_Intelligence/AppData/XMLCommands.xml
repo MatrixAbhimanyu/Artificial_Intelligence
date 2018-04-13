@@ -2,7 +2,7 @@
 <Commands>
   <Command>
     <Text>Hi</Text>
-    <Message>Hi How are you!</Message>
+    <Message>Hi, How are you!</Message>
   </Command>
   <Command>
     <Text>Good Morning</Text>
