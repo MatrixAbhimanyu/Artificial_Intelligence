@@ -42,7 +42,7 @@ namespace Artificial_Intelligence.Commands.Repository
         }
 
         /// <summary>
-        /// read command as a xml node
+        /// Read command as a xml node
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
@@ -53,7 +53,7 @@ namespace Artificial_Intelligence.Commands.Repository
         }
 
         /// <summary>
-        /// update command as axml node
+        /// Update command as axml node
         /// </summary>
         /// <param name="input"></param>
         /// <param name="output"></param>
@@ -65,7 +65,7 @@ namespace Artificial_Intelligence.Commands.Repository
         }
 
         /// <summary>
-        /// delete command as a xml command
+        /// Delete command as a xml command
         /// </summary>
         /// <param name="input"></param>
         public void Delete(string input)
@@ -76,7 +76,7 @@ namespace Artificial_Intelligence.Commands.Repository
         }
 
         /// <summary>
-        /// get xml command list
+        /// Get xml command list
         /// </summary>
         /// <returns></returns>
         public string[] GetCommandList()
@@ -87,7 +87,7 @@ namespace Artificial_Intelligence.Commands.Repository
 
         #region Private Member
         /// <summary>
-        /// get xml node element
+        /// Get xml node element
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>

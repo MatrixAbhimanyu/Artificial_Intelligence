@@ -24,7 +24,7 @@ namespace Artificial_Intelligence.Commands.Manager
 
         #region Public Member
         /// <summary>
-        /// find action commond
+        /// Find action commond
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
@@ -34,7 +34,7 @@ namespace Artificial_Intelligence.Commands.Manager
         }
 
         /// <summary>
-        /// cerate and update command
+        /// Create and update command
         /// </summary>
         /// <param name="input"></param>
         /// <param name="output"></param>
@@ -54,7 +54,7 @@ namespace Artificial_Intelligence.Commands.Manager
         }
 
         /// <summary>
-        /// get all command list
+        /// Get all command list
         /// </summary>
         /// <returns></returns>
         public string[] GetCommandList()
@@ -63,7 +63,7 @@ namespace Artificial_Intelligence.Commands.Manager
         }
 
         /// <summary>
-        /// get internet command
+        /// Get internet command
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
@@ -117,7 +117,7 @@ namespace Artificial_Intelligence.Commands.Manager
         }
 
         /// <summary>
-        /// open url for internet command
+        /// Open url for internet command
         /// </summary>
         /// <param name="webUrl"></param>
         private void OpenUrl(string webUrl)
@@ -126,7 +126,7 @@ namespace Artificial_Intelligence.Commands.Manager
         }
 
         /// <summary>
-        /// get exist command
+        /// Get exist command
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
