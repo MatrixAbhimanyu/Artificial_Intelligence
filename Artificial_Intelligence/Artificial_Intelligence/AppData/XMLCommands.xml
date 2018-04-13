@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Commands>
+  <Command>
+    <Text>Hi</Text>
+    <Message>Hi How are you!</Message>
+  </Command>
+  <Command>
+    <Text>Good Morning</Text>
+    <Message>Very Good Morning to you</Message>
+  </Command>
+  <Command>
+    <Text>time</Text>
+    <Message>Command not Accepted</Message>
+  </Command>
+  <Command>
+    <Text>date</Text>
+    <Message>Command not Accepted</Message>
+  </Command>
+  <Command>
+    <Text>internet laila</Text>
+    <Message>https://www.youtube.com/watch?v=95I5VaR7GeU</Message>
+  </Command>
+</Commands>
