@@ -8,7 +8,7 @@ namespace Artificial_Intelligence
      class Program
      {
         /// <summary>
-        /// The main entry point for the application.
+        /// Initialize AI system
         /// </summary>
         static void Main()
         {
